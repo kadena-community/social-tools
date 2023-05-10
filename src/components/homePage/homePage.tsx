@@ -15,7 +15,7 @@ export default function Page() {
         </h2>
         <ul className={ul}>
           <li>
-            <Link href="/update?content=">Create covers</Link>
+            <Link href="/update?content=">Cover page (to replace ?content=)</Link>
           </li>
         </ul>
         <footer className={footer}>

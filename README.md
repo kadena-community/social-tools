@@ -1,12 +1,15 @@
-# Social Video Header
+# Social Tools
 
-This is a small tool for creating social header. There are two variants, one with profiles and the other with footnotes.
+Social Tools is an internal application to enrich Kadena-related posts or articles. Iteratively we will add new features to it. But, for now, you can create an image or video by providing specific information about your content.
+
+In the examples below, you will find the JSON object you need to replace.
+As Ashwin promised, soon, we'll be able to fill out a form that creates the URL where you can find your media.
 
 ## How to use it
 
 Simply replace your JSON in the content searchParam as shown below.
 
-https://social-tools.kadena.io/update/?content={REPLACE_WITH_YOUR_JSON}
+/update/?content={REPLACE_WITH_YOUR_JSON}
 
 Data Type
 
