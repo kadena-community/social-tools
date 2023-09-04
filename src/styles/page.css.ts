@@ -1,4 +1,4 @@
-import { globalStyle, keyframes, style } from '@vanilla-extract/css'
+import { ComplexStyleRule, globalStyle, keyframes, style } from '@vanilla-extract/css'
 
 const background = 'rgba(255,255,255, 0)'
 
@@ -11,34 +11,45 @@ export const fadeIn = keyframes({
   },
 })
 
-export const border = keyframes({
-  '0%': {
-    border: '1px solid rgba(255, 255, 255, 0)',
-  },
-  '100%': {
-    border: '1px solid rgba(255, 255, 255, 0.2)',
-  },
-})
+const beforeAfterStyles: ComplexStyleRule = {
+  content: '',
+  position: 'absolute',
+  width: 20,
+  height: 20,
+  zIndex: 1000,
+  border: '1px solid rgba(255, 255, 255, 0.2)',
+}
 
 export const colorOverride = style({
   color: '#050505 !important',
 })
 
 export const area = style({
+  position: 'fixed',
+  left: 0,
+  zIndex: 1001,
   aspectRatio: '1920/1080',
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
   margin: 0,
-  width: 'calc(100% - 80px)',
-  maxWidth: 1024,
+  width: '50vw',
   boxSizing: 'border-box',
-  border: '1px solid rgba(255, 255, 255, 0)',
-  animationName: border,
-  animationDuration: '400ms',
-  animationFillMode: 'forwards',
-  animationTimingFunction: 'ease-in',
-  transition: 'all 200ms ease-in',
+  transition: 'opacity 200ms ease-in',
+  '::before': {
+    ...beforeAfterStyles,
+    top: 12,
+    left: 12,
+    borderRight: 'unset',
+    borderBottom: 'unset',
+  },
+  '::after': {
+    ...beforeAfterStyles,
+    bottom: 12,
+    right: 12,
+    borderTop: 'unset',
+    borderLeft: 'unset',
+  }
 })
 
 export const pageWrapper = style({

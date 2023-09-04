@@ -31,28 +31,36 @@ export const List = () => {
         <li data-theme={theme} className={[kadenaAccount, liElement].join(' ')}>
           @kadena_io
         </li>
-        {links ? (
-          links.map((link) => {
-            return (
-              <li data-theme={theme} className={liElement} key={`link-${link}`}>
-                {link} {'->'}
-              </li>
-            )
-          })
-        ) : (
-          <></>
-        )}
-        {tags ? (
-          tags.map((tag) => {
-            return (
-              <li data-theme={theme} className={liElement} key={`tag-${tag}`}>
-                #{tag}
-              </li>
-            )
-          })
-        ) : (
-          <></>
-        )}
+        {
+          links ? (
+            links.map((link) => {
+              if (!link) return <></>
+
+              return (
+                <li data-theme={theme} className={liElement} key={`link-${link}`}>
+                  {link} {'->'}
+                </li>
+              )
+            })
+          ) : (
+            <></>
+          )
+        }
+        {
+          tags ? (
+            tags.map((tag) => {
+              if (!tag) return <></>
+
+              return (
+                <li data-theme={theme} className={liElement} key={`tag-${tag}`}>
+                  #{tag}
+                </li>
+              )
+            })
+          ) : (
+            <></>
+          )
+        }
       </ul>
     </div>
   )

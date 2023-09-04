@@ -237,8 +237,21 @@ export const Image = () => {
       setColor_pink1(['white', '#FD00B6', '#fd004c', '#FD00B6', '#fd004c', '#FD00B6', '#fd004c', 'white'])
       setColor_pink2(['white', '#F20091', '#f20010', '#F20091', '#f20010', '#F20091', '#f20010', 'white'])
       setColor_pink3(['white', '#EA83DA', '#8d83ea', '#EA83DA', '#8d83ea', '#EA83DA', '#8d83ea', 'white'])
+    } else if (currentTheme !== content?.theme && content?.theme === 'dark') {
+      currentTheme = content.theme
+      setColor_white(['white', 'black'])
+      setColor_blue1(['black', '#000AFD', '#0047FD', '#000AFD', '#0047FD', '#000AFD', '#0047FD', 'black'])
+      setColor_blue2(['black', '#0047FD', '#2856ca', '#0047FD', '#2856ca', '#0047FD', '#2856ca', 'black'])
+      setColor_blue3(['black', '#0074FD', '#00f5fd', '#0074FD', '#00f5fd', '#0074FD', '#00f5fd', 'black'])
+      setColor_blue4(['black', '#1400FD', '#fd00f5', '#1400FD', '#fd00f5', '#1400FD', '#fd00f5', 'black'])
+      setColor_blue5(['black', '#3100F6', '#00f687', '#3100F6', '#00f687', '#3100F6', '#00f687', 'black'])
+      setColor_blue6(['black', '#1D18FE', '#18a6fe', '#1D18FE', '#18a6fe', '#1D18FE', '#18a6fe', 'black'])
+      setColor_blue7(['black', '#301EFF', '#781eff', '#301EFF', '#781eff', '#301EFF', '#781eff', 'black'])
+      setColor_pink1(['black', '#FD00B6', '#fd004c', '#FD00B6', '#fd004c', '#FD00B6', '#fd004c', 'black'])
+      setColor_pink2(['black', '#F20091', '#f20010', '#F20091', '#f20010', '#F20091', '#f20010', 'black'])
+      setColor_pink3(['black', '#EA83DA', '#8d83ea', '#EA83DA', '#8d83ea', '#EA83DA', '#8d83ea', 'black'])
     }
-  }, [content?.theme])
+  }, [content])
 
   if (!_content) {
     return <></>

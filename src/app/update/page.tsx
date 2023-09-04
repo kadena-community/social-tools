@@ -1,6 +1,7 @@
 import PageComponent from '@/components/update/page'
 import { metadata as _metadata } from '../page'
 import { BackgroundVector } from '@/components/background'
+import { Sidebar } from '@/components/sidebar'
 
 export const metadata = {
   ..._metadata,
@@ -26,6 +27,7 @@ export default async function Page(props: any) {
     <>
       <BackgroundVector />
       <PageComponent {...props} />
+      <Sidebar />
     </>
   )
 }

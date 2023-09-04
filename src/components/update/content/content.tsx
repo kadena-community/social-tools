@@ -50,36 +50,36 @@ export const Content = () => {
           {content.subtitle}
         </h2>
       </div>
-      {content.footer ? (
+      {content.contentType === 'summary' ? (
         <div className={footnote}>
           <h3 data-theme={content.theme} className={titleH3}>
-            {content.footer.title}
+            {content.footer?.title}
           </h3>
-          {content.footer.subtitle ? (
+          {content.footer?.subtitle ? (
             <h4 data-theme={content.theme} className={titleH4}>
-              {content.footer.subtitle}
+              {content.footer?.subtitle}
             </h4>
           ) : (
             <></>
           )}
         </div>
-      ) : content.profile ? (
+      ) : content.contentType === 'profile' ? (
         <div className={profilesWrapper}>
-          {content.profile.map((profile) => (
-            <div className={profileContent} key={`profile-${profile.image}`}>
+          {content.profile?.map((profile) => (
+            <div className={profileContent} key={`profile-${profile?.image}`}>
               <h3 data-theme={content.theme} className={[titleH3, 'dark'].join(' ')}>
-                {profile.name}
+                {profile?.name}
               </h3>
-              {profile.title ? (
+              {profile?.title ? (
                 <h4 data-theme={content.theme} className={titleH4}>
-                  {profile.title}
+                  {profile?.title}
                 </h4>
               ) : (
                 <></>
               )}
-              {profile.account ? (
+              {profile?.account ? (
                 <h5 data-theme={content.theme} className={titleH5}>
-                  {profile.account}
+                  {profile?.account}
                 </h5>
               ) : (
                 <></>

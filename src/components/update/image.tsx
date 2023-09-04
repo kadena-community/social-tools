@@ -24,25 +24,27 @@ export const ImageComp = () => {
   }
 
   const content: TContent = JSON.parse(_content)
-  const hasAvatar = !!content.profile?.filter(({ image }) => image)
+  const hasAvatar = !!content.profile?.filter((profile) => profile?.image)
 
   return (
     <>
       {hasAvatar ? (
-        content.profile?.map(({ name, image }) => {
-          return !!image ? (
-            <Image_
-              data-theme={content.theme}
-              key={`image-${image.split('/')[4]}`}
-              alt={name}
-              width={64}
-              height={64}
-              src={image}
-            />
-          ) : (
-            <></>
-          )
-        })
+        content.profile
+          ?.filter((d) => d)
+          .map(({ name, image }, index: number) => {
+            return !!image ? (
+              <Image_
+                data-theme={content.theme}
+                key={`image-${image?.split('/')[4] || name + '--' + index}`}
+                alt={name}
+                width={64}
+                height={64}
+                src={image}
+              />
+            ) : (
+              <></>
+            )
+          })
       ) : (
         <></>
       )}

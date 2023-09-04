@@ -36,12 +36,12 @@ export const outerWrapper = style({
 
 export const updateOuterWrapper = style({
   display: 'flex',
-  flexDirection: 'column',
+  flexDirection: 'row',
   alignItems: 'center',
-  justifyContent: 'center',
+  justifyContent: 'flex-start',
   margin: '0 auto',
-  width: '100%',
-  height: '100%',
+  width: '100vw',
+  height: '100vh',
   maxWidth: '100vw',
   maxHeight: '100vh',
   overflow: 'hidden',

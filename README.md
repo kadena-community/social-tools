@@ -38,13 +38,13 @@ Example #1
 
 ```json
 {
-  "title": "Builder Call",
-  "subtitle": "Connecting the Chains",
+  "title": "@kadena/fonts",
+  "subtitle": "Kode Mono now available as an NPM package",
   "seqUpdate": "2",
-  "tags": ["LiveNow"],
+  "tags": ["released", "npm"],
   "footer": {
-    "title": "Friday April 28th, 2023",
-    "subtitle": "16:00 - 18:00 CET"
+    "title": "Simply import the @kadena/font",
+    "subtitle": "to any dApp being created"
   }
 }
 ```

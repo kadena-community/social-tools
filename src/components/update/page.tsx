@@ -27,16 +27,19 @@ export type TContent = {
   tags?: string[]
   links?: string[]
   theme?: 'dark' | 'light'
+  contentType?: 'profile' | 'summary'
 }
 
 export default function Page() {
   const [isMounted, setIsMounted] = useState(false)
   const [transform, setTransform] = useState('')
+  const [left, setLeft] = useState('')
   const areaRef = useRef<HTMLDivElement | null>(null)
+  const sidebarRef = useRef<HTMLDivElement | null>(null)
 
   const setTransformHandlerDebounced = useCallback(() => {
-    if (window && areaRef?.current) {
-      const width = window.innerWidth
+    if (window && areaRef?.current && sidebarRef?.current) {
+      const width = window.innerWidth - sidebarRef.current?.clientWidth
       const height = window.innerHeight
       let newScale = width / areaRef.current.clientWidth
 
@@ -45,10 +48,15 @@ export default function Page() {
       }
 
       setTransform(`scale(${newScale})`)
+      setLeft(`${(areaRef.current.clientWidth * (newScale - 1)) / 2}px`)
     }
-  }, [areaRef])
+  }, [areaRef, sidebarRef])
 
   const setTransformHandler = debounce(setTransformHandlerDebounced, 100)
+
+  useEffect(() => {
+    sidebarRef.current = document.querySelector('#sidebar')
+  }, [])
 
   useEffect(() => {
     setIsMounted(true)
@@ -65,14 +73,14 @@ export default function Page() {
 
   useEffect(() => {
     setTransformHandler()
-  }, [areaRef, isMounted, setTransformHandler])
+  }, [areaRef, sidebarRef, isMounted, setTransformHandler])
 
   if (!isMounted) {
     return <></>
   }
 
   return (
-    <div className={area} style={{ transform }} ref={areaRef}>
+    <div className={area} style={{ transform, left }} ref={areaRef}>
       <div className={pageWrapper}>
         <div className={card}>
           <div className={avatars}>

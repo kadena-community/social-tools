@@ -479,6 +479,23 @@
   resolved "https://registry.yarnpkg.com/@eslint/js/-/js-8.39.0.tgz#58b536bcc843f4cd1e02a7e6171da5c040f4d44b"
   integrity sha512-kf9RB0Fg7NZfap83B3QOqOGg9QmD9yBudqQXzzOtn3i4y7ZUXe5ONeW34Gwi+TxhH4mvj72R1Zc300KUMa9Bng==
 
+"@ffmpeg/ffmpeg@^0.12.6":
+  version "0.12.6"
+  resolved "https://registry.yarnpkg.com/@ffmpeg/ffmpeg/-/ffmpeg-0.12.6.tgz#34dd5959b9446837240a32acb6979474e8935500"
+  integrity sha512-4CuXDaqrCga5qBwVtiDDR45y65OGPYZd7VzwGCGz3QLdrQH7xaLYEjU19XL4DTCL0WnTSH8752b8Atyb1SiiLw==
+  dependencies:
+    "@ffmpeg/types" "^0.12.0"
+
+"@ffmpeg/types@^0.12.0":
+  version "0.12.1"
+  resolved "https://registry.yarnpkg.com/@ffmpeg/types/-/types-0.12.1.tgz#659e4eb51f3e01e145a6fe99e5b8e12a373aa59a"
+  integrity sha512-n+v9yvxaBPi1Z/1wy2PvqMHvED3qV7LXBWnBmMBAAzybbs4KWp6wrhCTMxITORMHXpPZEEupsBH1iEoLuzYSUw==
+
+"@ffmpeg/util@^0.12.1":
+  version "0.12.1"
+  resolved "https://registry.yarnpkg.com/@ffmpeg/util/-/util-0.12.1.tgz#98afa20d7b4c0821eebdb205ddcfa5d07b0a4f53"
+  integrity sha512-10jjfAKWaDyb8+nAkijcsi9wgz/y26LOc1NKJradNMyCIl6usQcBbhkjX5qhALrSBcOy6TOeksunTYa+a03qNQ==
+
 "@humanwhocodes/config-array@^0.11.8":
   version "0.11.8"
   resolved "https://registry.yarnpkg.com/@humanwhocodes/config-array/-/config-array-0.11.8.tgz#03595ac2075a4dc0f191cc2131de14fbd7d410b9"
@@ -1212,6 +1229,13 @@ doctrine@^3.0.0:
   integrity sha512-yS+Q5i3hBf7GBkd4KG8a7eBNNWNGLTaEwwYWUijIYM7zrlYDM0BFXHjjPWlWZ1Rg7UaddZeIDmi9jF3HmqiQ2w==
   dependencies:
     esutils "^2.0.2"
+
+dot-prop@^8.0.2:
+  version "8.0.2"
+  resolved "https://registry.yarnpkg.com/dot-prop/-/dot-prop-8.0.2.tgz#afda6866610684dd155a96538f8efcdf78a27f18"
+  integrity sha512-xaBe6ZT4DHPkg0k4Ytbvn5xoxgpG0jOS1dYxSOwAHPuNLjP3/OzN0gH55SrLqpx8cBfSaVt91lXYkApjb+nYdQ==
+  dependencies:
+    type-fest "^3.8.0"
 
 electron-to-chromium@^1.4.284:
   version "1.4.377"
@@ -2924,6 +2948,11 @@ type-fest@^0.20.2:
   version "0.20.2"
   resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-0.20.2.tgz#1bf207f4b28f91583666cb5fbd327887301cd5f4"
   integrity sha512-Ne+eE4r0/iWnpAxD852z3A+N0Bt5RN//NjJwRd2VFHEmrywxf5vsZlh4R6lixl6B+wz/8d+maTSAkN1FIkI3LQ==
+
+type-fest@^3.8.0:
+  version "3.13.1"
+  resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-3.13.1.tgz#bb744c1f0678bea7543a2d1ec24e83e68e8c8706"
+  integrity sha512-tLq3bSNx+xSpwvAJnzrK0Ep5CLNWjvFTOp71URMaAEWBfRb9nnJiBoUe0tF8bI4ZFO3omgBR6NvnbzVUT3Ly4g==
 
 typed-array-length@^1.0.4:
   version "1.0.4"
