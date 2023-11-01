@@ -17,6 +17,7 @@ const nextConfig = {
   swcMinify: true,
   trailingSlash: true,
   poweredByHeader: false,
+  basePath: '/social-tools'
 }
 
 const {
