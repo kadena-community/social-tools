@@ -1,26 +1,26 @@
 @font-face {
   font-family: 'Neue Haas Regular';
-  src: url('/fonts/NeueHaas/NeueHaasDisplay-Roman.eot');
+  src: url('/social-tools/fonts/NeueHaas/NeueHaasDisplay-Roman.eot');
   src: local('Neue Haas Grotesk Display Pro 55 Roman'), local('NeueHaasDisplay-Roman'),
-    url('/fonts/NeueHaas/NeueHaasDisplay-Roman.eot?#iefix') format('embedded-opentype'),
-    url('/fonts/NeueHaas/NeueHaasDisplay-Roman.woff') format('woff'),
-    url('/fonts/NeueHaas/NeueHaasDisplay-Roman.ttf') format('truetype');
+    url('/social-tools/fonts/NeueHaas/NeueHaasDisplay-Roman.eot?#iefix') format('embedded-opentype'),
+    url('/social-tools/fonts/NeueHaas/NeueHaasDisplay-Roman.woff') format('woff'),
+    url('/social-tools/fonts/NeueHaas/NeueHaasDisplay-Roman.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Neue Haas Medium';
-  src: url('/fonts/NeueHaas/NeueHaasDisplay-Mediu.eot');
+  src: url('/social-tools/fonts/NeueHaas/NeueHaasDisplay-Mediu.eot');
   src: local('Neue Haas Grotesk Display Pro 65 Medium'), local('NeueHaasDisplay-Mediu'),
-    url('/fonts/NeueHaas/NeueHaasDisplay-Mediu.eot?#iefix') format('embedded-opentype'),
-    url('/fonts/NeueHaas/NeueHaasDisplay-Mediu.woff') format('woff'),
-    url('/fonts/NeueHaas/NeueHaasDisplay-Mediu.ttf') format('truetype');
+    url('/social-tools/fonts/NeueHaas/NeueHaasDisplay-Mediu.eot?#iefix') format('embedded-opentype'),
+    url('/social-tools/fonts/NeueHaas/NeueHaasDisplay-Mediu.woff') format('woff'),
+    url('/social-tools/fonts/NeueHaas/NeueHaasDisplay-Mediu.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Kode Mono';
-  src: url(/fonts/KodeMono.woff2);
+  src: url(/social-tools/fonts/KodeMono.woff2);
 }
