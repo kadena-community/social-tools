@@ -367,7 +367,7 @@ export const Sidebar = ({}) => {
           </label>
         </fieldset>
 
-        {/*
+        {/* 
         {!record.video ? (
           <button className={button} onClick={() => record.start(videoRef.current)}>
             Record
@@ -379,10 +379,19 @@ export const Sidebar = ({}) => {
             </button>
           </>
         )}
-        <video id="video" ref={videoRef} controls className={video}></video>
-        */}
+        <video id="video" ref={videoRef} controls className={video}></video> */}
       </div>
 
+      <button
+        className={[button, savebutton].join(' ')}
+        onClick={() => {
+          const newW = window.open(window.location.href + '&sidebar=false', 'detab', 'toolbar=0')
+          newW!.document.title = 'Record this window'
+        }}
+      >
+        Preview ↗️
+      </button>
+      <br />
       <button className={[button, savebutton].join(' ')} onClick={() => submitNewState()}>
         Save changes
       </button>

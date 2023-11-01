@@ -11,6 +11,15 @@ export const fadeIn = keyframes({
   },
 })
 
+export const fadeOut = keyframes({
+  '100%': {
+    opacity: 0,
+  },
+  '0%': {
+    opacity: 1,
+  },
+})
+
 const beforeAfterStyles: ComplexStyleRule = {
   content: '',
   position: 'absolute',
@@ -49,7 +58,7 @@ export const area = style({
     right: 12,
     borderTop: 'unset',
     borderLeft: 'unset',
-  }
+  },
 })
 
 export const pageWrapper = style({
@@ -230,3 +239,11 @@ export const titleH5 = style({
     },
   },
 })
+
+   export const fadeAfter = style({
+    animationName: fadeOut,
+    animationDuration: '400ms',
+    animationFillMode: 'forwards',
+    animationTimingFunction: 'ease-in',
+    animationDelay: 9000 + 'ms',
+  })

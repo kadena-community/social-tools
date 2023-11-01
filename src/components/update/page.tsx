@@ -2,7 +2,7 @@
 
 import debounce from 'lodash.debounce'
 
-import { area, avatars, card, pageWrapper } from '@/styles/page.css'
+import { area, avatars, card, fadeAfter, pageWrapper } from '@/styles/page.css'
 import { Logo } from '@/components/logo/logo'
 import { List } from './list/list'
 
@@ -38,8 +38,8 @@ export default function Page() {
   const sidebarRef = useRef<HTMLDivElement | null>(null)
 
   const setTransformHandlerDebounced = useCallback(() => {
-    if (window && areaRef?.current && sidebarRef?.current) {
-      const width = window.innerWidth - sidebarRef.current?.clientWidth
+    if (window && areaRef?.current) {
+      const width = window.innerWidth - (sidebarRef.current?.clientWidth || 0)
       const height = window.innerHeight
       let newScale = width / areaRef.current.clientWidth
 
@@ -80,7 +80,7 @@ export default function Page() {
   }
 
   return (
-    <div className={area} style={{ transform, left }} ref={areaRef}>
+    <div className={[area, fadeAfter].join(' ')} style={{ transform, left }} ref={areaRef}>
       <div className={pageWrapper}>
         <div className={card}>
           <div className={avatars}>
