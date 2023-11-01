@@ -12,10 +12,16 @@ export const fadeIn = keyframes({
 })
 
 export const fadeOut = keyframes({
-  '100%': {
+  '0%': {
+    opacity: 1,
+  },
+  '50%': {
     opacity: 0,
   },
-  '0%': {
+  '90%': {
+    opacity: 0,
+  },
+  '100%': {
     opacity: 1,
   },
 })
@@ -240,10 +246,10 @@ export const titleH5 = style({
   },
 })
 
-   export const fadeAfter = style({
-    animationName: fadeOut,
-    animationDuration: '400ms',
-    animationFillMode: 'forwards',
-    animationTimingFunction: 'ease-in',
-    animationDelay: 9000 + 'ms',
-  })
+export const fadeAfter = style({
+  animationName: fadeOut,
+  animationDuration: '2000ms',
+  animationFillMode: 'forwards',
+  animationTimingFunction: 'ease-in',
+  animationDelay: '9s',
+})
