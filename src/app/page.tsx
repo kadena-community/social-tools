@@ -9,9 +9,12 @@ export const metadata = {
   openGraph: {
     title: 'Social Tools',
     description: 'Internal app to create your own graphics',
-    url: 'https://social-tools.kadena.io',
+    url: 'https://kadena-community.github.io/social-tools',
     siteName: 'Social Tools',
-    images: ['https://social-tools.kadena.io/images/tile.png', 'https://social-tools.kadena.io/favicon.png'],
+    images: [
+      'https://kadena-community.github.io/social-tools/images/tile.png',
+      'https://kadena-community.github.io/social-tools/favicon.png',
+    ],
     locale: 'en-US',
     type: 'website',
   },
@@ -26,9 +29,12 @@ export const metadata = {
     },
   },
   icons: {
-    icon: [{ url: '/favicon.png', type: 'image/png' }],
-    shortcut: [{ url: '/favicon.png', type: 'image/png' }],
-    apple: [{ url: '/apple-icon.png' }, { url: '/apple-icon@3x.png', sizes: '124x124', type: 'image/png' }],
+    icon: [{ url: '/social-tools/favicon.png', type: 'image/png' }],
+    shortcut: [{ url: '/social-tools/favicon.png', type: 'image/png' }],
+    apple: [
+      { url: '/social-tools/apple-icon.png' },
+      { url: '/social-tools/apple-icon@3x.png', sizes: '124x124', type: 'image/png' },
+    ],
   },
   themeColor: 'black',
   twitter: {
@@ -37,7 +43,7 @@ export const metadata = {
     description: 'Internal app to create your own graphics',
     siteId: '@kadena_io',
     images: {
-      url: 'https://social-tools.kadena.io/images/tile.png',
+      url: 'https://kadena-community.github.io/social-tools/images/tile.png',
       alt: 'Internal app to create your own graphics',
     },
   },
